@@ -17,7 +17,7 @@
 ┌───────────────────────┐       ┌───────────────────────┐       ┌───────────────────────┐       ┌───────────────────────┐                           
 │                       │       │   disaggregation to   │       │      create html      │       │ loop back to data     │                           
 │  dbt from raw duckdb  │◄──────│  marketing and stripe │◄──────│    dashboards: kpi    │──────►│ generation* if metrics│                                  
-│                       │       │         duckdb        │       │     engine + build    │       │ are off               │                           
+│                       │       │      csv files        │       │     engine + build    │       │ are off               │                           
 └───────────────────────┘       └───────────────────────┘       └───────────────────────┘       └───────────────────────┘                           
             │                                                               │                                                
             ▼                                                               ▼                                               
