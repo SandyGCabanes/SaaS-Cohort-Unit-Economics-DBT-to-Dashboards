@@ -72,18 +72,18 @@ At $161 monthly ARPU (about $1,930 a year per account) this will be considered a
 Year over year, MRR grew 155.1% from Dec 2023 to Dec 2024, and 135.3% from Dec 2024 to Dec 2025. These are plain December-to-December changes in MRR. This slowdown is expected, as each year's base is larger than previous year's base.
 
 
-| MRR movement | Dec 2023 | Dec 2024 | Dec 2025 |
+| MRR movement, % of prior-month MRR | Dec 2023 | Dec 2024 | Dec 2025 |
 |---|---|---|---|
-| New business | $34,185 | $69,801 | $151,161 |
-| Expansion | $14,042 | $39,326 | $85,890 |
-| Contraction | -$6,657 | -$17,336 | -$45,644 |
-| Churn | -$4,819 | -$9,710 | -$26,880 |
-| Net MRR change | $36,751 | $82,080 | $164,527 |
+| New business | 8.5% | 6.7% | 6.1% |
+| Expansion | 3.5% | 3.8% | 3.5% |
+| Contraction | -1.7% | -1.7% | -1.8% |
+| Churn | -1.2% | -0.9% | -1.1% |
+| Net MRR growth | 9.1% | 7.9% | 6.7% |
 
-As a share of the previous month's MRR, new business fell from 8.5% to 6.7% to 6.1%. Expansion held steady at about 3.5% to 3.8%. Contraction inched up from 1.65% to 1.84%. The slowdown in net MRR growth is driven more by the contraction, as seen in the dashboard's MRR Movements stacked bars.
+> New business explains almost all of the slowdown. It fell from 8.5% to 6.1% of prior-month MRR, while expansion stayed flat near 3.5%. Contraction rose a little in 2025 (1.7% to 1.8%) and is worth watching. Expansion minus contraction and churn leaves only about 0.5 points, which is why NRR sits near 100%.
 
 
-## 2. Retention & Churn
+## 2. Retention
 
 | Metric | Dec 2024 | Dec 2025 |
 |---|---|---|
@@ -105,14 +105,14 @@ As a share of the previous month's MRR, new business fell from 8.5% to 6.7% to 6
 The blended 100.5% figure mentioned earlier is driven by Enterprise plan and Referral channel.  Enterprise is the only plan clearly above 100% in both years. On the channel side, Ads is below 100% in both years.
 
 **What the business can do:**  
-- Basic users: Offering smaller feature add-ons instead of forcing a full plan jump may be able to capture more revenue safely from Basic users. 
-- Pro users: Similarly, offering modular add-ons instead of forcing a massive price jump towards Enterprise may ease customers into higher spending.
-- Set up alerts when usage drops to help support teams that step in before the customer downgrades.  
-- Consider setting up automated onboarding emails to help catch accounts before they shrink their usage. 
-- Referral retention is higher than Organic.  Spend more on referral incentives to bring in accounts that stick around and spend more over time. Test out shifting Ads spending to Referral incentives.
-- Encourage feature adoption early on. Accounts that use core product features within their first month are less likely to downgrade. 
+- **Basic users:** Offering smaller feature add-ons instead of forcing a full plan jump may be able to capture more revenue safely from Basic users. 
+- **Pro users:** Similarly, offering modular add-ons instead of forcing a massive price jump towards Enterprise may ease customers into higher spending.
+- **Set up alerts** when usage drops to help support teams that step in before the customer downgrades.  
+- Consider setting up **automated onboarding emails** to help catch accounts before they shrink their usage. 
+- Referral retention is higher than Organic.  **Spend more on referral incentives** to bring in accounts that stick around and spend more over time. Test out **shifting Ads spending to Referral incentives.**
+- **Encourage feature adoption** early on. Accounts that use core product features within their first month are less likely to downgrade. 
 
- 
+## 3. Churn 
 **Churn: Good.** Logo churn of 1.7% and revenue churn of 1.1% in Dec 2025 are both better than the 2% to 4% monthly range typical for SMB SaaS. Logo churn slowly decreased, while Revenue churn increased.
 
 In the cohort data, about 91% to 93% of customers are still active one month after signup. The retention curve is steady across cohorts. This is a real strength to show investors.
@@ -123,7 +123,7 @@ In the cohort data, about 91% to 93% of customers are still active one month aft
 | Jan 2024 | 92.8% | 78.3% | 71.1% |
 | Jan 2025 | 91.9% | 78.2% | 72.0% |
 
-## 3. Unit Economics & Efficiency
+## 4. Unit Economics & Efficiency
 
 | Metric | 2024 cohorts | 2025 cohorts |
 |---|---|---|
@@ -154,16 +154,14 @@ CAC per new customer rose from $432 (Dec 2023 cohort) to $450 (Dec 2024) to $488
 
 **Payback: Fast.** Every cohort has recovered its acquisition cost. Healthy is generally considered 12 months or less, with an industry median near 18 months. This needs to be maintained.
 
-## 4. Next Steps Before the Pitch
+## 5. Next Steps Before the Pitch
 
-This analysis was built from product and billing data: MRR, CAC, customer counts. A few things investors will ask for are **beyond the scope of this dataset,** i.e., in the finance/accounting system.
+This analysis was built from product and billing data: MRR, CAC, customer counts. The following are a few things investors will ask for. These are **beyond the scope of this dataset,** e.g., in the finance/accounting system.  
+These can be evaluated separately by a **Financial Analyst.**
 
 - **Gross margin.** Series A investors expect gross margin above 70%. We will need hosting, support, and COGS figures layered on top of the revenue numbers.
 - **Rule of 40.** Growth rate plus profit margin, with 40%+ considered healthy. The growth half is available: MRR grew 135.3% from Dec 2024 to Dec 2025. The margin half needs the finance data above. 
 - **Burn multiple and magic number.** How efficiently cash and sales spend convert into new ARR. Needs P&L and cash data.
-
-These can be evaluated separately by a **Financial Analyst.**
-
 
 ## Sources of Saas Benchmarks
 - [SaaS Capital](https://www.saas-capital.com/blog-posts/benchmarking-metrics-for-bootstrapped-saas-companies/), *2026 Benchmarking Metrics for Bootstrapped SaaS Companies*
