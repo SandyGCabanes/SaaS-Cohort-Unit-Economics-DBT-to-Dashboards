@@ -1,16 +1,20 @@
 # Business Scenario
 **Simulations:** 
 
-I am a Data Analyst at a SaaS startup.  My responsibility is to analyze customer economics, cohort performance, and unit economics across that company's acquisition channels and across plan tiers. The resulting [Analyst's Report](#analysts-report) discusses VC funding readiness based on available data.
+Imagine this business scenario.  I am a Data Analyst at a SaaS startup.  My responsibility is to analyze customer economics, cohort performance, and unit economics across that company's acquisition channels and across plan tiers. 
 
-The business environment and operating data are simulated in this repo.  This is a deliberate proxy for real-world experience, since SaaS data are usually confidential. 
+My deliverables are:
+- the [Analyst's Report](#analysts-report), which discusses VC funding readiness based on available data, and
+- the SaaS Dashboard for [2023-2024](link) and for [2024-2025](link), which contain all the visualizations represented in the above report.
+
+In this repo, the operating data are simulated.  Since SaaS data are usually confidential, this is a deliberate proxy for a real-world scenario.
+
+In short, this project is a full end-to-end system, with **two-simulation paths:**
+
+- **Downstream:** data generation (ground truth) -> validation -> visualization. The pattern, builds and constants for the data-generating process are explicitly defined to represent the behavior of a SaaS business with three channels and three plan tiers.
+- **Upstream:**  data generation (ground truth) -> disaggregation -> dbt to raw reconstruction -> dbt to export deconstruction. The resulting **ground truth** customer and cost data are further disaggregated into simulated third-party source-system extracts before being processed through the dbt pipeline.
 
 Please see the [overall_project_diagram.txt](https://github.com/SandyGCabanes/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/blob/main/overall_project_diagram.txt) for this project.  
-
-In summary, it is a full end-to-end system, with **two-simulation paths:**
-
-- **Downstream:** data generation (ground truth) -> validation -> visualization. The patterns and constants for the data-generating process are explicitly defined to represent the behavior of a SaaS business.
-- **Upstream:**  data generation (ground truth) -> disaggregation -> dbt to raw reconstruction -> dbt to export deconstruction. The resulting **ground truth** customer and cost data are further disaggregated into simulated third-party source-system extracts before being processed through the dbt pipeline.
 
 
 # Analyst's Report 
@@ -27,9 +31,9 @@ In summary, it is a full end-to-end system, with **two-simulation paths:**
 
 **Based on:** [dashboard](link), [dashboard](link) (both with data through Dec 2025)
 
-## Executive Summary
+## Executive Summary of KPIs
 
-| KPI | Dec 2024 | Dec 2025 | Read |
+| KPI | Dec 2024 | Dec 2025 | What this means |
 |---|---|---|---|
 | Logo growth | +6.5% MoM | +6.2% MoM | Positive but slowing |
 | Revenue growth | +7.9% MoM | +6.7% MoM | Slowing |
@@ -54,7 +58,7 @@ Two things might weaken the pitch:
 | ARPU | $147 (+1.3%) | $161 (+0.4%) |
 | Active customers | 7,625 (+6.5%) | 16,392 (+6.2%) |
 
-At $161 monthly ARPU (about $1,930 a year per account) this will be considered an SMB-focused product. This is under the $25K annual contract value line that separates SMB from mid-market SaaS. The average is pulled up by the Enterprise plan. 
+At $161 monthly ARPU (about $1,930 a year per account) this will be considered an SMB-focused product. This is under the $25K annual contract value line that separates SMB from mid-market SaaS. 
 
 | Period | MoM MRR growth |
 |---|---|
@@ -65,7 +69,7 @@ At $161 monthly ARPU (about $1,930 a year per account) this will be considered a
 | 2025-06 | 7.7% |
 | 2025-12 | 6.7% |
 
-Year over year, MRR grew 155.1% from Dec 2023 to Dec 2024, and 135.3% from Dec 2024 to Dec 2025. These are plain December-to-December changes in MRR. This slowdown is expected, as each year's base is larger than previous year.
+Year over year, MRR grew 155.1% from Dec 2023 to Dec 2024, and 135.3% from Dec 2024 to Dec 2025. These are plain December-to-December changes in MRR. This slowdown is expected, as each year's base is larger than previous year's base.
 
 
 | MRR movement | Dec 2023 | Dec 2024 | Dec 2025 |
@@ -76,7 +80,7 @@ Year over year, MRR grew 155.1% from Dec 2023 to Dec 2024, and 135.3% from Dec 2
 | Churn | -$4,819 | -$9,710 | -$26,880 |
 | Net MRR change | $36,751 | $82,080 | $164,527 |
 
-As a share of the previous month's MRR, new business fell from 8.5% to 6.7% to 6.1%. Expansion held steady at about 3.5% to 3.8%. Contraction crept up from 1.65% to 1.84%. The slowdown is driven more by the contraction, as seen in the dashboard's MRR Movements stacked bars.
+As a share of the previous month's MRR, new business fell from 8.5% to 6.7% to 6.1%. Expansion held steady at about 3.5% to 3.8%. Contraction inched up from 1.65% to 1.84%. The slowdown in net MRR growth is driven more by the contraction, as seen in the dashboard's MRR Movements stacked bars.
 
 
 ## 2. Retention & Churn
