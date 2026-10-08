@@ -1,28 +1,37 @@
 ┌───────────────────────┐                                                                                                  
-│                       │                                                                                                  
-│      SaaS Project     │                                                                                                  
-│                       │                                                                                                  
+│   Start: create data  │                                                                                                  
+│   saas_dataset_*.csv  │                                                                                                  
+│   GROUND-TRUTH PANEL  │                                                                                                  
 └───────────────────────┘                                                                                                  
             │                                                                                                              
             │                                                                                                              
             ▼                                                                                                              
-┌───────────────────────┐       ┌───────────────────────┐       ┌───────────────────────┐       ┌───────────────────────┐                                   
-│   data generation*:   │       │                       │       │   python validation   │       │ loop back to data     │                                  
-│ ground truth customer │──────►│    excel validation   │──────►│  ipynb; export charts │──────►│ generation* if metrics│                                  
-│     panel and cost    │       │                       │       │                       │       │ are off               │                                  
-└───────────────────────┘       └───────────────────────┘       └───────────────────────┘       └───────────────────────┘                                  
-                                                                            │                                              
-                                                                            │                                              
-                                                                            ▼                                              
-┌───────────────────────┐       ┌───────────────────────┐       ┌───────────────────────┐       ┌───────────────────────┐                           
-│                       │       │   disaggregation to   │       │      create html      │       │ loop back to data     │                           
-│  dbt from raw duckdb  │◄──────│  marketing and stripe │◄──────│    dashboards: kpi    │──────►│ generation* if metrics│                                  
-│                       │       │      csv files        │       │     engine + build    │       │ are off               │                           
-└───────────────────────┘       └───────────────────────┘       └───────────────────────┘       └───────────────────────┘                           
-            │                                                               │                                                
-            ▼                                                               ▼                                               
-┌───────────────────────┐       ┌───────────────────────┐       ┌───────────────────────┐                                                                  
-│                       │       │                       │       │                       │                                                                  
-│     object storage    │──────►│     dbt to export     │──────►│     End of diagram    │                                                                  
-│                       │       │                       │       │                       │                                                                  
-└───────────────────────┘       └───────────────────────┘       └───────────────────────┘
+┌───────────────────────┐     ┌───────────────────────┐     ┌───────────────────────↰                                  
+│                       │     │                       │     │ Loop back to generate │                                  
+│    Excel validation   │────►│   Python validation   │────►│ GROUND-TRUTH PANEL if │                                  
+│                       │     │                       │     │    metrics are off    │                                  
+└───────────────────────┘     └───────────────────────┘     └───────────────────────┘                                  
+                                            │                                                                              
+                                            │                                                                              
+                                            ▼                                                                              
+┌───────────────────────┐     ┌───────────────────────┐     ┌───────────────────────↰                                  
+│    Disaggregate to    │     │      Create html      │     │ Loop back to generate │                                  
+│  marketing and stripe │◄────│      dashboards:      │────►│ GROUND-TRUTH PANEL if │                                  
+│csv files, 3rd-party   │     │      kpi_engine +     │     │    metrics are off    │                                  
+│api extracts simulated │     │    build dashboards   │     └───────────────────────┘                                  
+└───────────────────────┘     └───────────────────────┘                                                                                             
+            │                                                                                                              
+            ▼                                                                                                              
+┌───────────────────────┐     ┌───────────────────────┐    ┌───────────────────────┐                                       
+│ dbt 1: from raw csv,  │     │Manual upload to cloud │    │ dbt 2: (in progress)  │                                 
+│  creates GROUND-TRUTH │────►│  storage, simulated   │───►│export kpis and metrics│                                    
+│      PANEL files      │     │ bucket (local folder) │    │  for new dashboards   │                                 
+│staging reconstruction │     │  ideally automated    │    │    separate folder    │                                     
+└───────────────────────┘     │  with dated folders   │    └───────────────────────┘                                 
+                              │ and lifecycle rules   │                                                             
+                              └───────────────────────┘ 
+                                            │                                                                              
+                                            ▼ 
+                              ┌───────────────────────┐                                  
+                              │    End of Flowchart   │                                  
+                              └───────────────────────┘
