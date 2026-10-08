@@ -31,7 +31,7 @@ Please see the [overall_project_diagram.txt](https://github.com/SandyGCabanes/Sa
 
 **Based on:** [2023-2024](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2023-2024.html#revenue), [2024-2025](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2024-2025.html#revenue) (both with data through Dec 2025)
 
-![[Dashboard demo](./assets/saas_html_dashboard_demo.mp4_2.0x_800px_.gif)](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2024-2025.html#revenue) 
+[![Dashboard demo](./assets/saas_html_dashboard_demo.mp4_2.0x_800px_.gif)](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2024-2025.html#revenue) 
 
 ## Executive Summary of KPIs
 
