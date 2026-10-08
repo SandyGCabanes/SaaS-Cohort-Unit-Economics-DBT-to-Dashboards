@@ -5,7 +5,7 @@ Imagine this business scenario.  I am a Data Analyst at a SaaS startup.  My resp
 
 My deliverables are:
 - the [Analyst's Report](#analysts-report), which discusses VC funding readiness based on available data, and
-- the SaaS Dashboard for [2023-2024](link) and for [2024-2025](link), which contain all the visualizations represented in the above report.
+- the SaaS Dashboard for [2023-2024](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2023-2024.html#revenue) and for [2024-2025](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2024-2025.html#revenue), which contain all the visualizations represented in the above report.
 
 In this repo, the operating data are simulated.  Since SaaS data are usually confidential, this is a deliberate proxy for a real-world scenario.
 
@@ -29,7 +29,7 @@ Please see the [overall_project_diagram.txt](https://github.com/SandyGCabanes/Sa
 
 **Data source:** Business simulation [dataset](link) 
 
-**Based on:** [dashboard](link), [dashboard](link) (both with data through Dec 2025)
+**Based on:** [2023-2024](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2023-2024.html#revenue), [2024-2025](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2024-2025.html#revenue) (both with data through Dec 2025)
 
 ## Executive Summary of KPIs
 
