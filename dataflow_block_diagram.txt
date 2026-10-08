@@ -1,0 +1,46 @@
+```
+===================================================================================
+            dbt Transformations to Dashboard to Report Deliverable
+===================================================================================
+
+                         +---------------------+
+                         | Raw Event Logs      |
+                         +---------------------+
+                                    |
+                                    v
+                         [ dbt Layer 1: Staging ]
+                         (Intermediate Views)
+                                    |
+                                    v
+                         [ CSV panel, cost files ]
+                                    |
+                                    v
+                         [ Object Storage Bucket ]
+                                    |
+                                    v
+                         [ dbt Layer 2: Marts ]
+                         (Metric & Analytics Tables)
+                                    |
+           +------------------------+------------------------+
+           |                                                 |
+           v                                                 v
+   [ HTML Dashboards ]                             [ Tableau Dashboards ]
+   (Executive Reporting)                           (Interactive Analytics)
+
+
+
+===================================================================================
+            DATA GENERATION & SIMULATION FLOW (For Single Source of Truth)
+===================================================================================
+
+ [ Python Generation ] ---> [ Python Validation ] ---> [ Disaggregation Scripts ]
+ (saas_generation.py)       (saas_validation.ipynb)     (disaggregate_*.py)
+                                                               |
+                                                               v
+                                                    +---------------------+
+                                                    | Raw Event Logs      |
+                                                    | - Raw Stripe Logs   |
+                                                    | - Raw Marketing Logs|
+                                                    +---------------------+
+
+```
