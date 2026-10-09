@@ -126,8 +126,8 @@ In the cohort data, about 91% to 93% of customers are still active one month aft
 | Cohort | Month 1 | Month 12 | Month 24 |
 |---|---|---|---|
 | Jan 2023 | 91.4% | 77.2% | 70.4% |
-| Jan 2024 | 92.8% | 78.3% | 71.1% |
-| Jan 2025 | 91.9% | 78.2% | 72.0% |
+| Jan 2024 | 92.8% | 78.3% | n/a|
+| Jan 2025 | 91.9% | n/a | n/a |
 
 ## 4. Unit Economics & Efficiency
 
