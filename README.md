@@ -183,4 +183,10 @@ These can be evaluated separately by a **Financial Analyst.**
 
 > **A note on the data.** This dashboard runs on a business simulation dataset built for demonstration purposes, to represent real transactions. This summary shows how a Data Analyst would evaluate VC funding readiness using this KPI set. The conclusion is a simulated recommendation before pitching to investors. 
 
+> ### Limitations of the disaggregation code simulation
+
+> - Stripe customers carry a `source_customer_id` that links to the marketing files. Real 3rd-party exports have to be joined by date only. An advanced production pipeline would match customers on email, click IDs, or UTM data.
+> - Every customer has a channel. Real data has an "Unknown" or "Direct" bucket.
+> - CAC by plan tier is an allocation. Ad spend happens before a customer picks a plan.
+> - Disaggregated data are smoother than real data. Channel splits are assumed.
 
