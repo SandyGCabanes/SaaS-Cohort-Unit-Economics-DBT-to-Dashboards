@@ -1,1 +1,36 @@
+version: 2
 
+models:
+  - name: customer_month_panel
+    description: >
+      One row per customer per active billed month. customer_clv_24m, customer_cac,
+      unit_clv_cac_ratio_24m and is_mature_24m are fixed per customer and repeated on every month row.
+      customer_clv_24m counts MRR from lifetime months 0 to 23 only. For a cohort that has not yet
+      lived 24 months it is the revenue earned so far, and is_mature_24m is false.
+    columns:
+      - name: customer_id
+        tests: [not_null]
+      - name: cohort_year
+        tests: [not_null]
+      - name: calendar_month
+        tests: [not_null]
+      - name: customer_cac
+        tests: [not_null]
+      - name: customer_clv_24m
+        tests: [not_null]
+      - name: unit_clv_cac_ratio_24m
+        tests: [not_null]
+      - name: is_mature_24m
+        tests: [not_null]
+
+  - name: cost_per_customer
+    description: One row per cohort_month x channel x plan_tier (cohort_year is carried as a column). CAC and segment mix for that acquisition cohort.
+    columns:
+      - name: cohort_year
+        tests: [not_null]
+      - name: cohort_month
+        tests: [not_null]
+      - name: channel
+        tests: [not_null]
+      - name: plan_tier
+        tests: [not_null]
