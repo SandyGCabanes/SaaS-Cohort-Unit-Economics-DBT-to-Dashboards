@@ -5,14 +5,18 @@ Imagine this business scenario.  I am a Data Analyst at a SaaS startup.  My resp
 
 My deliverables are:
 - the [Analyst's Report](#analysts-report), which discusses VC funding readiness based on available data, and
-- the SaaS Dashboard for [2023-2024](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2023-2024.html#revenue) and for [2024-2025](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2024-2025.html#revenue), which contain all the visualizations represented in the above report.
+- the SaaS Dashboards
+	- [2022-2023](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2022-2023.html#revenue)
+	- [2023-2024](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2023-2024.html#revenue)
+	- [2024-2025](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2024-2025.html#revenue)
+	 
 
-In this repo, the operating data are simulated.  Since SaaS data are usually confidential, this is a deliberate proxy for a real-world scenario.
+In this repo, the operating data are simulated.  Since SaaS data are usually confidential, this is a deliberate **proxy for a real-world scenario.**
 
 In short, this project is a full end-to-end system, with **two-simulation paths:**
 
 - **Downstream:** data generation (ground truth) -> validation -> visualization. The pattern, builds and constants for the data-generating process are explicitly defined to represent the behavior of a SaaS business with three channels and three plan tiers.
-- **Upstream:**  data generation (ground truth) -> disaggregation -> dbt to raw reconstruction -> dbt to export deconstruction. The resulting **ground truth** customer and cost data are further disaggregated into simulated third-party source-system extracts before being processed through the dbt pipeline.
+- **Upstream:**  data generation (ground truth) -> disaggregation -> dbt to raw reconstruction -> dbt to export deconstruction. The resulting **ground truth** customer and cost data are further disaggregated into simulated third-party source-system extracts to simulate data that requires processing through the dbt pipeline.
 
 Please see the [overall_project_diagram.txt](https://github.com/SandyGCabanes/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/blob/main/overall_project_diagram.txt) for this project.  
 
@@ -29,7 +33,7 @@ Please see the [overall_project_diagram.txt](https://github.com/SandyGCabanes/Sa
 
 **Data source:** Business simulation [dataset](https://github.com/SandyGCabanes/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/blob/main/source/dataset_generation/saas_dataset_v9_demo_2022-01_2024-12_20261006_102453.csv)
 
-**Based on:** [2023-2024](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2023-2024.html#revenue), [2024-2025](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2024-2025.html#revenue) (both with data through Dec 2025)
+**Based on:** [2024-2025](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2024-2025.html#revenue) 
 
 [![Dashboard demo](./assets/saas_html_dashboard_demo.mp4_2.0x_800px_.gif)](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2024-2025.html#revenue) 
 
@@ -46,7 +50,7 @@ Please see the [overall_project_diagram.txt](https://github.com/SandyGCabanes/Sa
 
 This looks like a fundable business. Churn is low, payback is very fast, and every plan and channel more than meets the usual 3x LTV:CAC benchmark. Customer retention curves are steady from one cohort to the next.
 
-Two things might weaken the pitch:
+Two things might make the pitch weaker
 
 - **Growth is slowing.** Monthly revenue growth fell from 7.9% to 6.7% even though monthly signups roughly doubled. The revenue base is growing faster than new sign-ups can lift it.
 - **NRR is only a little above 100%.** It slipped from 101.2% to 100.5%. **MRR Movements**: Revenue growth leans on new business, and investors would like to see more growth coming from expansion of existing accounts.
