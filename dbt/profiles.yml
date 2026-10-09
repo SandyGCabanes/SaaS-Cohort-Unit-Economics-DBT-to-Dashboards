@@ -1,0 +1,10 @@
+dbt_from_raw_csv:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      # Working database for views and tables that dbt builds.
+      # Raw data is NOT in here. It is read straight from the CSV folders
+      # listed under vars in dbt_project.yml.
+      path: 'saas_analytics.duckdb'
+      threads: 4
