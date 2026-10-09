@@ -1,0 +1,88 @@
+ERD: HOW THE STRIPE TABLES MAP BACK TO THE PANEL
+
+SUMMARY
+
+The panel has one row per customer per active month. The script turns it
+into five Stripe-style tables. One wide intermediate helper table stripe_backcalc_helper is in the middle.  Derived field are assembled once, then the five tables are cut from it. 
+
+THE FIVE TABLES AND HOW THEY LINK
+
+  stripe_customers (1)
+        |
+        +--< stripe_subscriptions (1 per customer)
+                    |
+                    +--< stripe_invoices (1 per active month)
+                              |
+                              +-- stripe_invoice_line_items (1 per invoice)
+                              +-- stripe_balance_transactions (1 per invoice)
+
+  "--<" means one row on the left, many rows on the right.
+
+HOW EACH TABLE IS BUILT
+
+stripe_customers
+  id               cus_ + 6-digit number, from sorted customer_id
+  email, name      placeholders (customer000001@example.com, Customer 000001)
+  created          subscription start date
+  source_customer_id  the panel's customer_id. A real export would not have it.
+
+stripe_subscriptions
+  id               sub_ + the same 6-digit number
+  customer_id      links to stripe_customers.id
+  plan_tier        copied from the panel
+  status           "active" if the customer's last month is the file's last
+                   month, otherwise "canceled"
+  created          subscription start date
+  canceled_at      end of the customer's last invoice period (canceled only)
+
+stripe_invoices (one row per panel row)
+  id               in_ + customer number + _ + 3-digit sequence
+  customer_id, subscription_id   link upward
+  amount_paid      mrr x 100, in cents
+  currency         usd
+  status           always "paid"
+  invoice_date     the customer's billing day in that month
+  period_start/end first and last day of the calendar month
+
+stripe_invoice_line_items
+  id               il_ + the invoice's number
+  invoice_id       links to stripe_invoices.id
+  amount           mrr in DOLLARS (see known quirks)
+  description      "<plan_tier> plan - <calendar_month>"
+
+stripe_balance_transactions
+  id               txn_ + the invoice's number
+  source           links to stripe_invoices.id
+  type             always "charge"
+  amount, fee, net in cents. fee = 2.9% of amount + 30 cents.
+  created          invoice date
+
+WHERE EACH PANEL COLUMN GOES
+
+  customer_id      source_customer_id; drives all Stripe ids
+  cohort_month     subscription start date, customer created date
+  calendar_month   invoice period, invoice date, line item description
+  mrr              invoice amount_paid, line item amount, fee, net
+  plan_tier        subscription plan_tier, line item description
+  lifetime_month   not copied. Recalculated from the two back-calculated
+                   dates and compared. A warning prints on any mismatch.
+  channel, CAC, CLV columns   not used by the Stripe script
+
+KEY RULES
+
+1. One subscription per customer. No plan changes mid-life.
+2. Billing day is picked once per customer from a hash of customer_id
+   (day 1 to 28) and reused every month. 
+3. Status depends on the file. Run it on a longer file and some "active"
+   customers will become "canceled". 
+4. Names and emails are made up. 
+5. The fee rate is the standard US card rate. 
+
+LIMITATIONS
+
+- Line item amount is in dollars; invoice and balance amounts are in cents.
+  Real Stripe uses cents everywhere. Convert before joining on amounts.
+- Every invoice has one line item.  Deliberate choice to exclude customer plan changes or seat changes for simplicity.
+- Every invoice is "paid" and every transaction is a "charge". Again a deliberate choice for simplicity.  No failed payments, refunds, credits, or disputes.
+- Stripe customers here carry a `source_customer_id` that links to the marketing files. Real 3rd-party exports have to be joined by date only. An advanced production pipeline would match customers on email, click IDs, or UTM data.
+

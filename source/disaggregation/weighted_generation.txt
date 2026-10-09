@@ -1,0 +1,64 @@
+WEIGHTED GENERATION: THE NUMBERS BEHIND THE MARKETING TABLES
+
+SUMMARY
+
+The panel already says which channel and CAC each customer has. 
+This disaggregateion works backwards: it splits each channel into
+platforms, and invents click and impression counts that fit the CAC. Every
+split below is a weighted random draw. Seed is 42, so reruns match.
+
+HOW CUSTOMERS ARE ROUTED
+
+  Channel in panel     Platform table                  Rule
+  Ads                  google_ads / facebook_ads       60% Google, 40% Facebook
+  Organic              hubspot_organic_downloads       all
+  Referral             rewardful_referrals             all
+  anything else        dropped, with a warning
+
+THE WEIGHTS
+
+Google Ads
+  Ad group             85% brand search, 15% competitor search
+  Click-through rate   brand 15.0%, competitor 1.8%
+  Noise                each rate x a random 0.90 to 1.10
+
+Facebook Ads
+  Ad set               70% lookalike_1pct, 30% broad_b2b_tech
+  Placement            65% instagram_feed, 35% facebook_stories
+  Click-through rate   3.5% base; x1.4 for lookalike, x0.8 for broad
+
+Both ad platforms
+  Clicks               random draw (Poisson) around 50, which is
+                       1 / 2% conversion rate. One conversion per customer.
+  Impressions          clicks / click-through rate
+  Spend                the customer's CAC, rounded to cents
+
+HubSpot organic: first touch by plan tier
+  Tier         Viewed Pricing   Downloaded SaaS Model   Blog Subscription
+  Enterprise   80%              15%                     5%
+  Pro          65%              25%                     10%
+  Basic        55%              30%                     15%
+  Idea: bigger buyers arrive with buying intent; small ones arrive via content.
+
+Rewardful referrals
+  Affiliate id         random 100 to 999. Commission = the customer's CAC.
+
+Fallback: if the panel has no plan_tier column, tiers are drawn at
+60% Basic, 30% Pro, 10% Enterprise.
+
+Dates: each conversion lands on a random day and second inside the
+customer's cohort month.
+
+WHAT THE WEIGHTS DO TO THE RESULT
+
+- Google's blended click-through rate comes out near 12.9%
+  (0.85 x 15.0% + 0.15 x 1.8%).
+- Every ad customer costs exactly their CAC, so platform spend adds up to
+  the panel's paid CAC. Only clicks and impressions are invented.
+
+LIMITATIONS
+
+- All of these numbers are simply assumptions.  Do not treat as industry benchmarks.
+- B2B paid spend breakdown is roughly **46% Google, 41% LinkedIn, 8% Meta** [(**Swydo**)](https://www.swydo.com/blog/google-ads-vs-linkedin-ads/). Google and Meta (no LinkedIn) 60/40 split over-weights Meta. This is a deliberate choice to simplify.
+- The 15% brand-search rate is high next to typical paid search averages.
+- Other partners are excluded for simplicity, ex. LinkedIn, Bing, partner networks.  
