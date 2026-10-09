@@ -12,8 +12,7 @@
 | New var | none | `clv_horizon_months: 24` |
 | New tests | none | 3 not_null, 2 data tests |
 
-Downstream: `dbt_to_exports` reads the old column names in `stg_revenue.sql`, `sources.yml`
-and `reindexed_panel_audit_mrr.sql`. Update those three files before the next run.
+Downstream (if adding): `dbt_to_exports` reads the old column names in `stg_revenue.sql`, `sources.yml`  and `reindexed_panel_audit_mrr.sql`. Need to update those three files before the next run.
 
 ---
 
@@ -29,7 +28,7 @@ and `reindexed_panel_audit_mrr.sql`. Update those three files before the next ru
 | Intermediate models | views | tables, so the large invoice CSV is read once |
 | Tests | 8 on the marts | adds unique / not_null / relationships on staging and unique `customer_id` on `int_customer_acquisition` |
 | Marts, export macro | unchanged | unchanged |
-| `walkthrough.md` | included | not carried over |
+
 
 
 **What changed from the old project **
@@ -39,10 +38,10 @@ and `reindexed_panel_audit_mrr.sql`. Update those three files before the next ru
 - `cast(nullif(canceled_at, '') as date)` stays as it was. Works for the  active customers with a blank `canceled_at`.
 - The marts, the export macro, and the business logic are unchanged.
 - The subscriptions typo is fixed, so the file is `stripe_subscriptions.csv`.
-- The intermediate models are now tables. Otherwise the 122 MB invoices file would be read once per model that uses it. This is my choice, so tell me if you'd rather keep views.
-- I added `unique`, `not_null`, and `relationships` tests on staging, plus a `unique` test on `customer_id` in `int_customer_acquisition`.
+- The intermediate models are now tables. Otherwise the 122 MB invoices file would be read once per model that uses it. 
+- Added `unique`, `not_null`, and `relationships` tests on staging, plus a `unique` test on `customer_id` in `int_customer_acquisition`.
 
 
 **How to use it**
 
-Copy the full Stripe CSVs over the excerpts in `raw/stripe_outputs/`, then run `dbt build`. The two output CSVs land in `exports/`. After that, compare `customer_month_panel.csv` to your original `saas_dataset_*.csv`. I did not carry over `walkthrough.md`.
+Copy the full Stripe CSVs in `raw/stripe_outputs/`, then run `dbt build`. The two output CSVs land in `exports/`. After that, compare `customer_month_panel.csv` to the original `saas_dataset_*.csv`. 
