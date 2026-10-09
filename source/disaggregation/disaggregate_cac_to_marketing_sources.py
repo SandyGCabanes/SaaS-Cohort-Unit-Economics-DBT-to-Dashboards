@@ -7,9 +7,8 @@ This treats customer_month_panel.csv as source of truth.  The customer_id,
 channel, plan_tier, cohort_month, customer_cac are read from it, 
 deduplicated to one row per customer, and works backwards
 to produce what each acquisition channel's raw export would plausibly look
-like, matching real-world platform schemas (see erd_stripe_to_panel.txt /
-real_life_sources_of_saas_dataset.txt for the reasoning, and
-weighted_generation.txt for the realism benchmarks applied below).
+like, approximating real-world platform schemas (see erd_stripe_to_panel.txt /
+weighted_generation.txt for the assumptions).
 
 Usage:
     python disaggregate_cac_to_marketing_sources.py            # newest saas_dataset_*.csv
