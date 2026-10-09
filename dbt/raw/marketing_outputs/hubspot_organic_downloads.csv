@@ -1,0 +1,101 @@
+hubspot_contact_id,customer_id,recent_conversion_event,lifecycle_stage,plan_tier,organic_acquisition_cost_usd,signup_timestamp
+hs_cnt_00000,2022-01_Organic_Basic_00000,Downloaded SaaS Model,Customer,Basic,38.82,2022-01-24 04:38:36
+hs_cnt_00001,2022-01_Organic_Basic_00001,Viewed Pricing,Customer,Basic,38.82,2022-01-20 09:41:38
+hs_cnt_00002,2022-01_Organic_Basic_00002,Viewed Pricing,Customer,Basic,38.82,2022-01-06 16:50:43
+hs_cnt_00003,2022-01_Organic_Basic_00003,Viewed Pricing,Customer,Basic,38.82,2022-01-23 01:51:25
+hs_cnt_00004,2022-01_Organic_Basic_00004,Blog Subscription,Customer,Basic,38.82,2022-01-27 05:03:17
+hs_cnt_00005,2022-01_Organic_Basic_00005,Viewed Pricing,Customer,Basic,38.82,2022-01-31 02:30:40
+hs_cnt_00006,2022-01_Organic_Basic_00006,Downloaded SaaS Model,Customer,Basic,38.82,2022-01-12 02:08:36
+hs_cnt_00007,2022-01_Organic_Basic_00007,Viewed Pricing,Customer,Basic,38.82,2022-01-30 23:21:44
+hs_cnt_00008,2022-01_Organic_Basic_00008,Viewed Pricing,Customer,Basic,38.82,2022-01-04 07:33:42
+hs_cnt_00009,2022-01_Organic_Basic_00009,Blog Subscription,Customer,Basic,38.82,2022-01-29 09:16:21
+hs_cnt_00010,2022-01_Organic_Basic_00010,Viewed Pricing,Customer,Basic,38.82,2022-01-27 08:06:14
+hs_cnt_00011,2022-01_Organic_Basic_00011,Viewed Pricing,Customer,Basic,38.82,2022-01-21 09:05:10
+hs_cnt_00012,2022-01_Organic_Basic_00012,Downloaded SaaS Model,Customer,Basic,38.82,2022-01-19 01:50:24
+hs_cnt_00013,2022-01_Organic_Basic_00013,Viewed Pricing,Customer,Basic,38.82,2022-01-14 05:44:16
+hs_cnt_00000,2022-01_Organic_Enterprise_00000,Viewed Pricing,Customer,Enterprise,1181.84,2022-01-16 22:31:38
+hs_cnt_00001,2022-01_Organic_Enterprise_00001,Viewed Pricing,Customer,Enterprise,1181.84,2022-01-28 19:38:45
+hs_cnt_00000,2022-01_Organic_Pro_00000,Viewed Pricing,Customer,Pro,121.02,2022-01-20 23:26:54
+hs_cnt_00001,2022-01_Organic_Pro_00001,Viewed Pricing,Customer,Pro,121.02,2022-01-29 12:02:07
+hs_cnt_00002,2022-01_Organic_Pro_00002,Viewed Pricing,Customer,Pro,121.02,2022-01-17 06:35:15
+hs_cnt_00003,2022-01_Organic_Pro_00003,Viewed Pricing,Customer,Pro,121.02,2022-01-29 10:29:11
+hs_cnt_00004,2022-01_Organic_Pro_00004,Downloaded SaaS Model,Customer,Pro,121.02,2022-01-26 16:15:18
+hs_cnt_00005,2022-01_Organic_Pro_00005,Downloaded SaaS Model,Customer,Pro,121.02,2022-01-16 06:52:45
+hs_cnt_00006,2022-01_Organic_Pro_00006,Viewed Pricing,Customer,Pro,121.02,2022-01-07 20:34:11
+hs_cnt_00007,2022-01_Organic_Pro_00007,Viewed Pricing,Customer,Pro,121.02,2022-01-03 04:47:28
+hs_cnt_00008,2022-01_Organic_Pro_00008,Viewed Pricing,Customer,Pro,121.02,2022-01-20 21:58:44
+hs_cnt_00000,2022-02_Organic_Basic_00000,Viewed Pricing,Customer,Basic,40.93,2022-02-28 01:34:48
+hs_cnt_00001,2022-02_Organic_Basic_00001,Blog Subscription,Customer,Basic,40.93,2022-02-08 16:22:52
+hs_cnt_00002,2022-02_Organic_Basic_00002,Viewed Pricing,Customer,Basic,40.93,2022-02-04 21:51:50
+hs_cnt_00003,2022-02_Organic_Basic_00003,Viewed Pricing,Customer,Basic,40.93,2022-02-04 05:23:23
+hs_cnt_00004,2022-02_Organic_Basic_00004,Viewed Pricing,Customer,Basic,40.93,2022-02-15 12:37:14
+hs_cnt_00005,2022-02_Organic_Basic_00005,Downloaded SaaS Model,Customer,Basic,40.93,2022-02-20 08:49:34
+hs_cnt_00006,2022-02_Organic_Basic_00006,Blog Subscription,Customer,Basic,40.93,2022-02-19 13:12:10
+hs_cnt_00007,2022-02_Organic_Basic_00007,Viewed Pricing,Customer,Basic,40.93,2022-02-11 16:49:09
+hs_cnt_00008,2022-02_Organic_Basic_00008,Downloaded SaaS Model,Customer,Basic,40.93,2022-02-22 03:11:13
+hs_cnt_00009,2022-02_Organic_Basic_00009,Viewed Pricing,Customer,Basic,40.93,2022-02-10 06:34:52
+hs_cnt_00010,2022-02_Organic_Basic_00010,Viewed Pricing,Customer,Basic,40.93,2022-02-03 03:15:40
+hs_cnt_00011,2022-02_Organic_Basic_00011,Blog Subscription,Customer,Basic,40.93,2022-02-14 06:48:26
+hs_cnt_00012,2022-02_Organic_Basic_00012,Viewed Pricing,Customer,Basic,40.93,2022-02-06 01:13:23
+hs_cnt_00013,2022-02_Organic_Basic_00013,Downloaded SaaS Model,Customer,Basic,40.93,2022-02-27 14:15:27
+hs_cnt_00000,2022-02_Organic_Enterprise_00000,Viewed Pricing,Customer,Enterprise,1217.23,2022-02-28 23:47:28
+hs_cnt_00001,2022-02_Organic_Enterprise_00001,Viewed Pricing,Customer,Enterprise,1217.23,2022-02-24 11:50:24
+hs_cnt_00002,2022-02_Organic_Enterprise_00002,Viewed Pricing,Customer,Enterprise,1217.23,2022-02-20 03:14:04
+hs_cnt_00000,2022-02_Organic_Pro_00000,Viewed Pricing,Customer,Pro,116.5,2022-02-02 00:08:25
+hs_cnt_00001,2022-02_Organic_Pro_00001,Downloaded SaaS Model,Customer,Pro,116.5,2022-02-23 10:03:09
+hs_cnt_00002,2022-02_Organic_Pro_00002,Downloaded SaaS Model,Customer,Pro,116.5,2022-02-27 09:09:15
+hs_cnt_00003,2022-02_Organic_Pro_00003,Viewed Pricing,Customer,Pro,116.5,2022-02-07 14:20:25
+hs_cnt_00004,2022-02_Organic_Pro_00004,Viewed Pricing,Customer,Pro,116.5,2022-02-09 07:50:57
+hs_cnt_00005,2022-02_Organic_Pro_00005,Downloaded SaaS Model,Customer,Pro,116.5,2022-02-13 09:43:22
+hs_cnt_00006,2022-02_Organic_Pro_00006,Viewed Pricing,Customer,Pro,116.5,2022-02-10 09:08:16
+hs_cnt_00007,2022-02_Organic_Pro_00007,Viewed Pricing,Customer,Pro,116.5,2022-02-07 05:50:19
+hs_cnt_00008,2022-02_Organic_Pro_00008,Downloaded SaaS Model,Customer,Pro,116.5,2022-02-24 20:30:49
+hs_cnt_00000,2022-03_Organic_Basic_00000,Downloaded SaaS Model,Customer,Basic,40.03,2022-03-26 15:14:00
+hs_cnt_00001,2022-03_Organic_Basic_00001,Blog Subscription,Customer,Basic,40.03,2022-03-19 03:22:57
+hs_cnt_00002,2022-03_Organic_Basic_00002,Downloaded SaaS Model,Customer,Basic,40.03,2022-03-09 05:21:54
+hs_cnt_00003,2022-03_Organic_Basic_00003,Downloaded SaaS Model,Customer,Basic,40.03,2022-03-06 00:16:17
+hs_cnt_00004,2022-03_Organic_Basic_00004,Viewed Pricing,Customer,Basic,40.03,2022-03-21 02:03:09
+hs_cnt_00005,2022-03_Organic_Basic_00005,Blog Subscription,Customer,Basic,40.03,2022-03-15 22:54:37
+hs_cnt_00006,2022-03_Organic_Basic_00006,Blog Subscription,Customer,Basic,40.03,2022-03-05 06:00:46
+hs_cnt_00007,2022-03_Organic_Basic_00007,Viewed Pricing,Customer,Basic,40.03,2022-03-30 16:04:19
+hs_cnt_00008,2022-03_Organic_Basic_00008,Downloaded SaaS Model,Customer,Basic,40.03,2022-03-13 18:12:45
+hs_cnt_00009,2022-03_Organic_Basic_00009,Viewed Pricing,Customer,Basic,40.03,2022-03-08 11:37:10
+hs_cnt_00010,2022-03_Organic_Basic_00010,Viewed Pricing,Customer,Basic,40.03,2022-03-06 16:48:51
+hs_cnt_00011,2022-03_Organic_Basic_00011,Blog Subscription,Customer,Basic,40.03,2022-03-17 01:42:34
+hs_cnt_00012,2022-03_Organic_Basic_00012,Viewed Pricing,Customer,Basic,40.03,2022-03-28 22:50:08
+hs_cnt_00013,2022-03_Organic_Basic_00013,Downloaded SaaS Model,Customer,Basic,40.03,2022-03-17 16:14:23
+hs_cnt_00014,2022-03_Organic_Basic_00014,Downloaded SaaS Model,Customer,Basic,40.03,2022-03-30 19:51:22
+hs_cnt_00000,2022-03_Organic_Enterprise_00000,Viewed Pricing,Customer,Enterprise,1176.35,2022-03-11 17:33:49
+hs_cnt_00001,2022-03_Organic_Enterprise_00001,Downloaded SaaS Model,Customer,Enterprise,1176.35,2022-03-04 02:03:09
+hs_cnt_00002,2022-03_Organic_Enterprise_00002,Viewed Pricing,Customer,Enterprise,1176.35,2022-03-20 07:56:52
+hs_cnt_00000,2022-03_Organic_Pro_00000,Downloaded SaaS Model,Customer,Pro,122.47,2022-03-07 19:40:32
+hs_cnt_00001,2022-03_Organic_Pro_00001,Downloaded SaaS Model,Customer,Pro,122.47,2022-03-25 13:32:56
+hs_cnt_00002,2022-03_Organic_Pro_00002,Blog Subscription,Customer,Pro,122.47,2022-03-07 01:26:16
+hs_cnt_00003,2022-03_Organic_Pro_00003,Blog Subscription,Customer,Pro,122.47,2022-03-01 01:35:14
+hs_cnt_00004,2022-03_Organic_Pro_00004,Viewed Pricing,Customer,Pro,122.47,2022-03-19 01:34:46
+hs_cnt_00005,2022-03_Organic_Pro_00005,Viewed Pricing,Customer,Pro,122.47,2022-03-29 02:11:03
+hs_cnt_00006,2022-03_Organic_Pro_00006,Blog Subscription,Customer,Pro,122.47,2022-03-22 15:24:02
+hs_cnt_00007,2022-03_Organic_Pro_00007,Viewed Pricing,Customer,Pro,122.47,2022-03-07 23:05:17
+hs_cnt_00008,2022-03_Organic_Pro_00008,Viewed Pricing,Customer,Pro,122.47,2022-03-05 12:27:20
+hs_cnt_00009,2022-03_Organic_Pro_00009,Viewed Pricing,Customer,Pro,122.47,2022-03-17 15:26:31
+hs_cnt_00000,2022-04_Organic_Basic_00000,Viewed Pricing,Customer,Basic,39.44,2022-04-21 17:19:29
+hs_cnt_00001,2022-04_Organic_Basic_00001,Viewed Pricing,Customer,Basic,39.44,2022-04-30 16:14:10
+hs_cnt_00002,2022-04_Organic_Basic_00002,Downloaded SaaS Model,Customer,Basic,39.44,2022-04-29 12:02:26
+hs_cnt_00003,2022-04_Organic_Basic_00003,Blog Subscription,Customer,Basic,39.44,2022-04-10 14:39:14
+hs_cnt_00004,2022-04_Organic_Basic_00004,Downloaded SaaS Model,Customer,Basic,39.44,2022-04-12 20:04:49
+hs_cnt_00005,2022-04_Organic_Basic_00005,Blog Subscription,Customer,Basic,39.44,2022-04-14 04:23:26
+hs_cnt_00006,2022-04_Organic_Basic_00006,Blog Subscription,Customer,Basic,39.44,2022-04-16 06:01:58
+hs_cnt_00007,2022-04_Organic_Basic_00007,Blog Subscription,Customer,Basic,39.44,2022-04-18 23:57:34
+hs_cnt_00008,2022-04_Organic_Basic_00008,Downloaded SaaS Model,Customer,Basic,39.44,2022-04-10 16:50:23
+hs_cnt_00009,2022-04_Organic_Basic_00009,Viewed Pricing,Customer,Basic,39.44,2022-04-21 01:00:45
+hs_cnt_00010,2022-04_Organic_Basic_00010,Viewed Pricing,Customer,Basic,39.44,2022-04-08 10:31:58
+hs_cnt_00011,2022-04_Organic_Basic_00011,Viewed Pricing,Customer,Basic,39.44,2022-04-09 15:20:01
+hs_cnt_00012,2022-04_Organic_Basic_00012,Downloaded SaaS Model,Customer,Basic,39.44,2022-04-21 07:53:09
+hs_cnt_00013,2022-04_Organic_Basic_00013,Viewed Pricing,Customer,Basic,39.44,2022-04-08 06:41:32
+hs_cnt_00014,2022-04_Organic_Basic_00014,Viewed Pricing,Customer,Basic,39.44,2022-04-23 10:27:03
+hs_cnt_00015,2022-04_Organic_Basic_00015,Downloaded SaaS Model,Customer,Basic,39.44,2022-04-27 13:46:56
+hs_cnt_00000,2022-04_Organic_Enterprise_00000,Viewed Pricing,Customer,Enterprise,1233.0,2022-04-12 23:36:41
+hs_cnt_00001,2022-04_Organic_Enterprise_00001,Viewed Pricing,Customer,Enterprise,1233.0,2022-04-26 15:02:27
+hs_cnt_00002,2022-04_Organic_Enterprise_00002,Viewed Pricing,Customer,Enterprise,1233.0,2022-04-28 19:14:13
+hs_cnt_00000,2022-04_Organic_Pro_00000,Viewed Pricing,Customer,Pro,123.58,2022-04-10 02:22:07
+hs_cnt_00001,2022-04_Organic_Pro_00001,Downloaded SaaS Model,Customer,Pro,123.58,2022-04-11 10:48:07
