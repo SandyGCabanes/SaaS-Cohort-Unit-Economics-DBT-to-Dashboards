@@ -71,7 +71,6 @@ every customer is measured over the same window.
 - `cost_per_customer` is unchanged.
 
 ## Checks run while building (on the shipped sample)
-Done with a separate script, not with dbt:
 - All 49 sample Stripe customers match exactly one marketing row.
 - No marketing `customer_id` appears twice (64,941 rows across the four files).
 - All 2,326 sample invoices are `paid`, with no customer billed twice in one month. The panel should therefore have 2,326 rows from the sample.
