@@ -185,8 +185,8 @@ These can be evaluated separately by a **Financial Analyst.**
 
 > ### Limitations of the disaggregation code simulation
 
-> - Stripe customers carry a `source_customer_id` that links to the marketing files. Real 3rd-party exports have to be joined by date only. An advanced production pipeline would match customers on email, click IDs, or UTM data.
-> - Every customer has a channel. Real data has an "Unknown" or "Direct" bucket.
-> - CAC by plan tier is an allocation. Ad spend happens before a customer picks a plan.
+> - Stripe customers carry a `source_customer_id` that links to the marketing files. Real 3rd-party exports need an advanced production pipeline that would match customers on email, click IDs, or UTM data.  This column is the proxy for that process.
+> - Every customer has a channel. This was a deliberate choice. Real data has an "Unknown" or "Direct" bucket.
+> - CAC by plan tier is an allocation. 
 > - Disaggregated data are smoother than real data. Channel splits are assumed.
 
