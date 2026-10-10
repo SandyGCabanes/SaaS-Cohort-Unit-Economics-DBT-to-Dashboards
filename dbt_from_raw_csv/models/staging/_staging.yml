@@ -1,0 +1,55 @@
+version: 2
+
+# Raw files are read by the raw_csv macro (see macros/raw_csv.sql), from the
+# folders set in dbt_project.yml vars. They are listed here for documentation.
+#
+#   raw_stripe_dir     stripe_customers.csv, stripe_subscriptions.csv,
+#                      stripe_invoices.csv, stripe_invoice_line_items.csv,
+#                      stripe_balance_transactions.csv
+#   raw_marketing_dir  facebook_ads.csv, google_ads.csv,
+#                      hubspot_organic_downloads.csv, rewardful_referrals.csv
+
+models:
+  - name: stg_stripe__customers
+    description: 1 row per Stripe customer. customer_id is the marketing customer_id (source_customer_id in the raw file).
+    columns:
+      - name: stripe_customer_id
+        tests: [unique, not_null]
+      - name: customer_id
+        tests: [unique, not_null]
+
+  - name: stg_stripe__subscriptions
+    description: 1 row per subscription. Blank canceled_at means the subscription is still active.
+    columns:
+      - name: subscription_id
+        tests: [unique, not_null]
+      - name: stripe_customer_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_stripe__customers')
+                field: stripe_customer_id
+
+  - name: stg_stripe__invoices
+    description: 1 row per bill. Amounts converted from cents to dollars.
+    columns:
+      - name: invoice_id
+        tests: [unique, not_null]
+      - name: stripe_customer_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_stripe__customers')
+                field: stripe_customer_id
+
+  - name: stg_stripe__invoice_line_items
+    columns:
+      - name: invoice_line_item_id
+        tests: [unique, not_null]
+
+  - name: stg_stripe__balance_transactions
+    columns:
+      - name: balance_transaction_id
+        tests: [unique, not_null]

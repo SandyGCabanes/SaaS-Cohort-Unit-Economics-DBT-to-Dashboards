@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: int_customer_acquisition
+    description: 1 row per customer. Channel and CAC from marketing, plan tier from the Stripe subscription.
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]
+
+  - name: int_customer_monthly_mrr
+    description: 1 row per customer per paid billing month.
+    columns:
+      - name: customer_id
+        tests: [not_null]
+      - name: calendar_month
+        tests: [not_null]
