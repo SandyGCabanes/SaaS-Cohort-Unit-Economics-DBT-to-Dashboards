@@ -1,5 +1,9 @@
 # This section contains the python validation notebook that produced the SaaS metrics, kpis, retention heatmaps, cohorts and others.
 
-This was an intermediate check that loops back to saas_generation.py if the results do not produce realistic ratios.  After satisfactory results, dashboard-building started.
+- This was a test run using python to check if the results produce realistic kpis, retention heatmaps, growth charts and others. 
 
-Aside from the excel checks, the results from these runs gave directions on how to tweak the saas_generation.py script to make it more realistic.
+- The goal is to get realistic ratios, kpis, retention rates, all the while checking relative differences across channels and plan-tiers.  If not, some configurations are tweaked when looping back to saas_generation.py and calibration_config.py.  
+
+- The other check was an excel workbook, too large to upload here. 
+
+- After python results and excel results were similar, dashboard-building started.
