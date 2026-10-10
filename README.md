@@ -33,7 +33,7 @@ Please see the [overall_project_diagram.txt](https://github.com/SandyGCabanes/Sa
 
 **Data source:** Business simulation [dataset-demo](https://github.com/SandyGCabanes/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/blob/main/source/dataset_generation/saas_dataset_v9_demo_2022-01_2024-12_20261006_102453.csv)
 
-**Based on:** [2024-2025](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2024-2025.html#revenue) 
+**Based on:** [2024-2025](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2024-2025.html) 
 
 [![Dashboard demo](./assets/saas_dashboard_demo.mp4_2.0x_800px_.gif)](https://sandygcabanes.github.io/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/saas_dashboard_2024-2025.html#revenue) 
 
