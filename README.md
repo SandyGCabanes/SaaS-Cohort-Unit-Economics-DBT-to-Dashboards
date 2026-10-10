@@ -15,8 +15,8 @@ In this repo, the operating data are simulated.  Since SaaS data are usually con
 
 In short, this project is a full end-to-end system, with **two-simulation paths:**
 
-- **Downstream:** data generation (ground truth) -> validation -> visualization. The pattern, builds and constants for the data-generating process are explicitly defined to represent the behavior of a SaaS business with three channels and three plan tiers.
-- **Upstream:**  data generation (ground truth) -> disaggregation -> [dbt from raw csv](https://github.com/SandyGCabanes/SaaS-Cohort-Unit-Economics-Dashboards/tree/main/dbt_from_raw_csv) -> dbt to export deconstruction. The resulting **ground truth** customer and cost data are further disaggregated into simulated third-party source-system extracts to simulate data that requires processing through the dbt pipeline.
+- **Downstream:** [data generation (ground truth)](source/dataset_generation) -> [validation](source/validation) -> [visualization](docs/index.html). The monthly patterns, builds and constants for the data-generating process are explicitly defined to represent the behavior of a SaaS business with three channels and three plan tiers.
+- **Upstream:**  [data generation (ground truth)](source/dataset_generation) -> [disaggregation](source/disaggregation) -> [dbt from raw csv](https://github.com/SandyGCabanes/SaaS-Cohort-Unit-Economics-Dashboards/tree/main/dbt_from_raw_csv) -> dbt to export deconstruction. The generated **ground truth** customer and cost data are further disaggregated into simulated third-party source-system extracts to resemble data that requires processing through the dbt pipeline.
 
 Please see the [overall_project_diagram.txt](https://github.com/SandyGCabanes/SaaS-Cohort-Unit-Economics-DBT-to-Dashboards/blob/main/overall_project_diagram.txt) for this project.  
 
