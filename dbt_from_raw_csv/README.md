@@ -92,4 +92,4 @@ If `dbt` fails with a `KeyError` on a macro file, delete the `target/` folder an
 ```
 dbt build
 ```
-Run it from this folder. `profiles.yml` sits here, so set `DBT_PROFILES_DIR` to this folder.
+Run it from this folder. `profiles.yml` belongs here, so set `DBT_PROFILES_DIR` to this folder.
